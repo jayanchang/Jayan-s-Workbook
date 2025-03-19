@@ -1,6 +1,6 @@
 const trollText = document.getElementById("trollText");
 let hoverCount = 0;
-const maxTries = 4; // Moves for first 4 hovers, stops at 5th hover
+const maxTries = 5; // Moves for first 4 hovers, stops at 5th hover
 
 trollText.addEventListener("mouseenter", () => {
     if (hoverCount < maxTries) {
@@ -16,6 +16,11 @@ trollText.addEventListener("mouseenter", () => {
         trollText.style.transform = `translate(${randomX}vw, ${randomY}vh)`;
         hoverCount++;
     }
+
+    // On the 5th hover, change the text and stop moving
+    if (hoverCount === maxTries) {
+        trollText.textContent = "HAHA I will stop trolling, click me";
+    }
 });
 
 // Prevent clicking until the 5th time
@@ -24,3 +29,4 @@ trollText.addEventListener("click", (event) => {
         event.preventDefault(); // Block clicking before 5th time
     }
 });
+
