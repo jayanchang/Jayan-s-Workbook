@@ -1,0 +1,412 @@
+/* Doodle Grid (Responsive) */
+body {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    background-color: #fff2a8;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-shadow: 2px 2px #fff;
+}
+
+/* 🎁 Moving Banner */
+.banner {
+
+    overflow: hidden;
+    background-color: #c4ddff;
+    border-top: 3px solid black;
+    margin: 2vw;
+    border-bottom: 3px solid black;
+}
+
+.banner-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 12s linear infinite;
+    padding: 10px;
+    font-size: 24px;
+    color: #d84315;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.doodle-grid {
+    display: flex;
+    /* Keeps items in a row */
+    justify-content: center;
+    /* Centers items horizontally */
+    align-items: center;
+    /* Aligns items vertically */
+    flex-wrap: wrap;
+    /* Allows wrapping if the screen is too small */
+    gap: 2vw;
+    /* Adds spacing between items */
+    background-color: #ff8787;
+    padding: 2vw;
+    border: 4px solid black;
+    border-radius: 2vw;
+    width: 90%;
+    max-width: 1200px;
+    /* Ensures it doesn't get too wide on large screens */
+    margin: 1vw auto;
+    position: relative;
+    box-shadow: 3px 3px 0px black;
+    text-decoration: none;
+}
+
+.doodle-grid a {
+    text-decoration: none;
+}
+
+/* Week Blocks (Adjustable Size) */
+.week {
+    flex: 1 1 250px;
+    /* Adjusts width dynamically, min 250px */
+    max-width: 300px;
+    /* Prevents oversized blocks */
+    text-align: center;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.2s ease-out;
+}
+
+.week:hover {
+    transform: rotate(-3deg) scale(1.05);
+}
+
+/* Hand-Drawn Image Icons (Responsive) */
+.week img {
+    width: 80%;
+    /* Makes images responsive inside their containers */
+    max-width: 120px;
+    /* Prevents them from getting too large */
+    height: auto;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 0px black;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hand-Drawn Text */
+.week p {
+    font-size: 16px;
+    margin: 5px 0 0;
+    color: black;
+    text-shadow: 2px 2px #ff7043;
+}
+
+
+/* Week 1 Container */
+.week-1 {
+    display: flex;
+    flex-direction: column;
+    /* Stack rows */
+    gap: 2vw;
+    background-color: #fdd835;
+    padding: 2vw;
+    border: 4px solid black;
+    border-radius: 2vw;
+    width: 90%;
+    max-width: 1200px;
+    margin: 1vw auto;
+    position: relative;
+    box-shadow: 3px 3px 0px black;
+}
+
+/* Content Rows Inside Week-1 */
+.content-row {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    gap: 4vw;
+
+}
+
+/* Image Styling */
+.week-1 img {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.2s ease-out;
+}
+
+.week-1 img:hover {
+    transform: rotate(-3deg) scale(1.05);
+
+}
+
+/* Text Styling */
+.week-1-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 3vw;
+}
+
+/* Heading */
+.week-1 h1 {
+    font-size: 48px;
+    color: #000000;
+    text-shadow: 2px 2px #ffffff;
+    margin-bottom: 0.5vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.week-1 h2 {
+    font-size: 32px;
+    color: #000000;
+    text-shadow: 2px 2px #ffffff;
+    margin-bottom: 0.5vw;
+    justify-content: left;
+    text-align: left;
+}
+
+.week-1 h3 {
+    font-size: 24px;
+    color: #000000;
+    text-shadow: 2px 2px #ffffff;
+    margin-bottom: 0.5vw;
+    justify-content: left;
+    text-align: left;
+    text-decoration: underline;
+}
+
+/* Paragraph */
+.week-1 p {
+    font-size: 19.2px;
+    color: #000000;
+    text-shadow: 2px 2px #ffffff;
+
+}
+
+.week-1-text ul {
+    list-style-type: none;
+    /* Removes default bullets */
+    padding: 0;
+}
+
+.week-1-text li {
+    font-size: 19.2px;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+.week-1-text li strong {
+    color: #e74c3c;
+    /* Highlights gesture names in red */
+}
+
+
+/* Week 2 Containter */
+.week-2 {
+    display: flex;
+    flex-direction: column;
+    /* Stack rows */
+    gap: 2vw;
+    background-color: #ff9a67;
+    padding: 2vw;
+    border: 4px solid black;
+    border-radius: 2vw;
+    width: 90%;
+    max-width: 1200px;
+    margin: 1vw auto;
+    position: relative;
+    box-shadow: 3px 3px 0px black;
+}
+
+.week-2 h1 {
+    font-size: 48px;
+    color: #000000;
+    text-shadow: 2px 2px #ffffff;
+    margin-bottom: 0.5vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.week-2 img {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.2s ease-out;
+}
+
+.week-2 img:hover {
+    transform: rotate(-3deg) scale(1.05);
+
+}
+
+.week-2 h2 {
+    font-size: 32px;
+    color: #000000;
+    text-shadow: 2px 2px #ffffff;
+    margin-bottom: 0.5vw;
+    justify-content: left;
+    text-align: left;
+}
+
+.week-2-text ul {
+    list-style-type: none;
+    /* Removes default bullets */
+    padding: 0;
+}
+
+.week-2-text li {
+    font-size: 19.2px;
+    margin-bottom: 0.5em;
+}
+
+.week-2-text li strong {
+    color: #e74c3c;
+    /* Highlights gesture names in red */
+}
+
+/* Hunter Gather Gallery Layout */
+.hunter-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    /* Reduced gap */
+    flex-wrap: nowrap;
+    /* Prevent wrapping to force 1 row on wider screens */
+    margin-top: 2vw;
+}
+
+/* Individual Card */
+.hunter-card {
+    flex: 1 1 30%;
+    max-width: 31%;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0px black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    text-align: center;
+}
+
+/* Card Image - Smaller */
+.hunter-card img {
+    width: 90%;
+    /* Made smaller */
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 2px solid black;
+    margin-bottom: 0.8vw;
+}
+
+/* Description Styling */
+.card-description h3 {
+    margin-bottom: 0.4vw;
+}
+
+.card-description p {
+    font-size: 0.9em;
+    margin-bottom: 0.4vw;
+}
+
+.card-description a {
+    color: #007acc;
+    text-decoration: underline;
+}
+
+
+/* 🧠 Memory Game Section */
+.memory-game-container {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff8dc;
+    border: 4px solid black;
+    border-radius: 20px;
+    box-shadow: 4px 4px 0px black;
+    padding: 2vw;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    box-sizing: border-box;
+}
+
+/* 🎮 Game Title */
+.game-title {
+    margin-bottom: 1vw;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+/* 🃏 Game Board Grid */
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5vw;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* 🔲 Each Card */
+.emoji-card {
+    aspect-ratio: 1/1;
+    width: 20vw;
+    max-width: 100px;
+    font-size: 6vw;
+    max-height: 100px;
+    background-color: #ffd700;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.emoji-card.flipped {
+    background-color: #ffffff;
+}
+
+.emoji-card.matched {
+    background-color: #90ee90;
+    pointer-events: none;
+}

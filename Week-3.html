@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3</title>
+    <link rel="stylesheet" href="week3.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- 🟨 Top Header -->
+    <header>
+        <h1><a href="index.html">JAYAN'S WORKBOOK</a></h1>
+    </header>
+
+    <!-- Doodle Grid -->
+    <div class="doodle-grid">
+        <div class="week">
+            <a href="week-1-2.html" class="week-link">
+                <img src="/img/flying rabbit.gif" alt="Week 1-3" class="static" data-hover="/img/flying rabbit.gif" />
+                <p>Week 1-2</p>
+            </a>
+        </div>
+
+        <div class="week">
+            <img src="/img/square hair girl.gif" alt="Week 4-6" class="static" data-hover="/img/square hair girl.gif" />
+            <p>Week 3</p>
+        </div>
+        <div class="week">
+            <img src="/img/pink bear.gif" alt="Week 7-9" class="static" data-hover="/img/pink bear.gif" />
+            <p>Week 4-?</p>
+        </div>
+    </div>
+
+    <!-- 🎁 Moving Banner -->
+    <div class="banner">
+        <div class="banner-text">
+            ✨ Welcome to Week 3 ✨ Welcome to Week 3 ✨ Welcome to Week 3 ✨
+        </div>
+    </div>
+
+    <!-- 📚 Main Content Area -->
+    <div class="week3-container">
+        <!-- ⬅️ Left Column -->
+        <div class="left-column">
+            <!-- 🕹️ Mini Game -->
+            <div class="game-placeholder">
+                <div class="rps-game">
+                    <div class="rps-display">
+                        <span id="player-choice">🤚</span>
+                        <span id="computer-choice">🤚</span>
+                    </div>
+                    <h2>Let's Play!!</h2>
+                    <div class="rps-options">
+                        <button class="rps-btn" data-choice="✊">✊<br><span>Rock</span></button>
+                        <button class="rps-btn" data-choice="🤚">🤚<br><span>Paper</span></button>
+                        <button class="rps-btn" data-choice="✌️">✌️<br><span>Scissors</span></button>
+                    </div>
+                    <p id="rps-result">Make your move!</p>
+                </div>
+            </div>
+
+            <!-- 📝 Paper Prototyping Section -->
+            <div class="paper-prototype">
+                <h3>Paper Prototyping</h3>
+                <div class="paper-prototype-content">
+                    <p>
+                        For the paper prototyping, I explored different responsive design approaches for mobile,
+                        including using a dropdown menu for organization, varying image sizes to create visual
+                        hierarchy, and incorporating a menu icon to reduce cognitive load.
+                    </p>
+                    <img src="img/paper-prototyping.jpg" alt="Paper Prototyping Sketch" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 🧱 Right Column - HTML/CSS Practice -->
+        <div class="right-column">
+            <h2>CSS Practice with Flexbox</h2>
+
+            <div class="practice-block">
+                <img src="img/flex-wrap.png" alt="Flex Wrap Example" class="practice-image" />
+                <p><code>flex-wrap: wrap;</code><br />Wraps items to the next line if they don’t fit.</p>
+            </div>
+
+            <div class="practice-block">
+                <img src="img/flex-column.png" alt="Flex Column Example" class="practice-image" />
+                <p><code>flex-direction: column;</code><br />Arranges items vertically.</p>
+            </div>
+
+            <div class="practice-block">
+                <img src="img/space-between.png" alt="Space Between Example" class="practice-image" />
+                <p><code>justify-content: space-between;</code><br />Evenly spaces items in a row.</p>
+            </div>
+
+            <div class="practice-block">
+                <img src="img/flex-row.png" alt="Flex Row Example" class="practice-image" />
+                <p><code>justify-content: flex-row;</code><br />The flex items are arranged horizontally, from left to
+                    right.</p>
+            </div>
+        </div>
+
+        <!-- 📚 Center Section - Workbook Build Up -->
+        <div class="center-section">
+            <h2>Workbook Build Up!</h2>
+            <p>
+                This section showcases the progressive development of my workbook, combining interactive elements,
+                design sketches, and final outcomes.
+            </p>
+
+            <div class="workbook">
+                <div class="workbook-item">
+                    <img src="img/homepage-sketch.jpg" alt="Week 3 Sketch" />
+                    <div class="workbook-text">
+                        <h3>HomePage Sketch</h3>
+                        <p>For the homepage, I wanted to make my design more interactive (especially since this class is
+                            literally called Interactive Media). I pushed myself beyond my comfort zone and used
+                            JavaScript to create an interactive element. Through trial and error, I adjusted the
+                            parameters for the suitable text moving distance, setting a minimum distance of 20 VH/VW.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="workbook-item">
+                    <img src="img/animation trial.gif" alt="Week 3 Prototype" />
+                    <div class="workbook-text">
+                        <h3>Engaging Animation</h3>
+                        <p>Next, I thought about how to create a personal identity and style to make the website more
+                            engaging. I incorporated hand-drawn animated characters as elements on my page, each
+                            featuring a vivid color.</p>
+                    </div>
+                </div>
+
+                <div class="workbook-item">
+                    <img src="img/hover-effect.gif" alt="Week 3 Final" />
+                    <div class="workbook-text">
+                        <h3>Interactive Elements</h3>
+                        <p>
+                            I used multiple <code style="color: green">:hover</code> effects with
+                            <code style="color: green">transform: scale</code> and
+                            <code style="color: green">transition: ease</code> to create smooth size-changing animations
+                            for the elements, making the website more interactive.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
