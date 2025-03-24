@@ -1,3 +1,18 @@
+/* 🔁 Background Video Styling */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Push behind everything */
+    opacity: 0.3; /* Optional: to make content readable */
+    pointer-events: none; /* So user can click through video */
+  }
+  
+
+
 /* Doodle Grid (Responsive) */
 body {
     font-family: 'Permanent Marker', cursive;
@@ -25,7 +40,7 @@ header h1 {
 .banner {
 
     overflow: hidden;
-    background-color: #c4ddff;
+    background-color: #82b8ff;
     border-top: 3px solid black;
     margin: 2vw;
     border-bottom: 3px solid black;
