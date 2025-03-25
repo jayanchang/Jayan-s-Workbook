@@ -393,7 +393,24 @@ header h1 {
     margin-bottom: 0.5rem;
     color: #000;
     text-shadow: 1px 1px #fff;
+    text-align: center;
+}
+
+.workbook-text h4 {
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+    color: #000;
+    text-shadow: 1px 1px #fff;
     text-decoration: underline;
+}
+
+.center-section-buttom{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    text-align: center;
 }
 
 .workbook-text p {
