@@ -1,0 +1,261 @@
+/* 🔁 Background Video Styling */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Push behind everything */
+    opacity: 0.3;
+    /* Optional: to make content readable */
+    pointer-events: none;
+    /* So user can click through video */
+}
+
+/* 🎮 Minecraft Vibe */
+@font-face {
+    font-family: 'Monocraft';
+    src: url('fonts/Monocraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Monocraft', monospace;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* 🟪 Header */
+header {
+    background-image: url("img/grass-header.png");
+    /* Update the path if needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 4px solid black;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+header h1 a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+h2 {
+    text-decoration: underline;
+    text-decoration-color: #000;
+}
+
+/* 🔁 Navigation Grid */
+.doodle-grid {
+    display: flex;
+    /* Keeps items in a row */
+    justify-content: center;
+    /* Centers items horizontally */
+    align-items: center;
+    /* Aligns items vertically */
+    flex-wrap: wrap;
+    /* Allows wrapping if the screen is too small */
+    gap: 2vw;
+    /* Adds spacing between items */
+    background-color: #d36d00;
+    padding: 2vw;
+    border: 4px solid black;
+    border-radius: 2vw;
+    width: 90%;
+    max-width: 1200px;
+    /* Ensures it doesn't get too wide on large screens */
+    margin: 1vw auto;
+    position: relative;
+    box-shadow: 3px 3px 0px black;
+    text-decoration: none;
+}
+
+.doodle-grid a {
+    text-decoration: none;
+}
+
+/* Week Blocks (Adjustable Size) */
+.week {
+    flex: 1 1 250px;
+    /* Adjusts width dynamically, min 250px */
+    max-width: 300px;
+    /* Prevents oversized blocks */
+    text-align: center;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.2s ease-out;
+}
+
+.week:hover {
+    transform: rotate(-3deg) scale(1.05);
+}
+
+/* Hand-Drawn Image Icons (Responsive) */
+.week img {
+    width: 80%;
+    /* Makes images responsive inside their containers */
+    max-width: 120px;
+    /* Prevents them from getting too large */
+    height: auto;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 0px black;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hand-Drawn Text */
+.week p {
+    font-size: 16px;
+    margin: 5px 0 0;
+    color: black;
+    text-shadow: 2px 2px #ff7043;
+}
+
+/* 🟨 Scrolling Banner */
+.banner {
+    overflow: hidden;
+    background-color: #d6e9ff;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.banner-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 12s linear infinite;
+    padding: 10px;
+    font-size: 22px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 📦 Pixel Message Box */
+.pixel-box {
+    background-color: #fce498;
+    border: 3px solid black;
+    padding: 1rem;
+    text-align: center;
+    font-size: 18px;
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 black;
+}
+
+/* 📚 Side-by-Side Layout */
+.week4-columns {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 🎨 Left - Kusama Work */
+.kusama-work {
+    flex: 2;
+    background-color: #fff;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 2px 2px 0 black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers the image horizontally */
+}
+
+.kusama-work img {
+    width: 90%;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-color: #000;
+    border-style: solid;
+    box-shadow: 2px 2px 0 black;
+    border-width: 3px;
+    max-width: max-content;
+}
+
+.kusama-work p {
+    font-size: 16px;
+}
+
+.minecraft-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 1rem;
+    font-family: 'Monocraft', monospace;
+    font-size: 16px;
+    background-color: #79c05a;
+    color: white;
+    border: 4px solid #3e721d;
+    border-radius: 0;
+    box-shadow: 4px 4px 0 #2a4f14;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.1s;
+  }
+  
+  .minecraft-button:hover {
+    transform: translateY(-2px);
+    background-color: #63a14d;
+  }
+  
+
+
+/* ⚙️ Right - P5 Tips */
+.p5-tips {
+    flex: 1;
+    background-color: #fff;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 2px 2px 0 black;
+}
+
+.p5-tips .tip {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.p5-tips img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.p5-tips p {
+    font-size: 14px;
+    margin: 0;
+}
