@@ -65,7 +65,7 @@
         <div class="kusama-work">
             <h2>Kusama Inspired Work</h2>
             <img src="img/Kusama-practice.png" alt="Kusama Inspired Work">
-            <a href="kusama-sketch/index.html" class="minecraft-button" target="_blank">▶ View P5.js Sketch</a>
+            <a href="kusama-sketch/index.html" class="minecraft-button" target="_blank">▶ View the work</a>
             <p>I applied the basic and useful functions we learned in class to recreate Kusama’s work in an interactive
                 way. I learned that combining <span style="font-family: Courier;">mouseX</span> and <span
                     style="font-family: Courier;">mouseY</span> is a very handy technique for making a design highly
@@ -74,22 +74,73 @@
                 used the <span style="font-family: Courier;">map()</span> function.</p>
         </div>
 
-
+        <!-- P5 JS Tips Here -->
         <div class="p5-tips">
             <h2>P5.JS Note Taking</h2>
             <div class="tip">
-                <img src="img/p5-tip1.png" alt="p5.js Tip 1">
+                <img src="img/canvas.jpg" alt="p5.js Tip 1">
                 <p>Use <code>createCanvas()</code>: Always start your sketch with <code>createCanvas()</code> to define
                     the drawing area.</p>
             </div>
             <div class="tip">
-                <img src="img/p5-tip2.png" alt="p5.js Tip 2">
+                <img src="img/mouse-trace.jpg" alt="p5.js Tip 2">
                 <p>Use <code>mouseX</code>, <code>mouseY</code>: These let your elements follow the mouse to create
                     interactions.</p>
             </div>
+            <div class="tip">
+                <img src="img/ball-moving.gif" alt="p5.js Tip 2">
+                <p>Use <code>random()</code> to introduce unpredictable outcomes, making the interaction more engaging
+                    and feel less robotic.</p>
+
+            </div>
+            <div class="tip">
+                <img src="img/square-moving.gif" alt="p5.js Tip 2">
+                <p>Use <code>frameRate()</code> because it's useful for adjusting the smoothness and
+                    responsiveness of a motion, adding a sense of dynamism to the design.</p>
+            </div>
+
+
+
+
         </div>
     </div>
 
+    <!-- 🐞 Bug Hunt Game -->
+    <div class="bug-game-container">
+        <h2>🐞 <u>Bug Hunt Challenge</u></h2>
+        <button id="startBtn">Start</button>
+    </div>
+
+
+
+    <!--🎨 Self Portrait-->
+    <div class="self-portrait-section">
+        <h2>🎨 <u>Self Portrait</u></h2>
+      
+        <div class="portrait-content">
+          <img src="img/self-portrait.gif" alt="Self Portrait" class="portrait-image" />
+      
+          <div class="portrait-description">
+            <p>
+              I combined a lot of my previous coding knowledge—such as arrays and conditionals—for this design. Throughout the course, I’ve consistently focused on making my work interactive. With that goal in mind, I embedded a super cool feature: users can brush my hair! I achieved this using 
+              <code>dist()</code>—if the cursor is near a strand, it appears to move or become “disturbed.” This makes my self-portrait reactive and playful!
+            </p>
+      
+            <div class="portrait-button">
+              <a href="Self_Sketch/index.html" class="minecraft-btn" target="_blank">🎮 View Interactive Portrait</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
+
 
 </html>
