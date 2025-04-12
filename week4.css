@@ -283,7 +283,7 @@ h2 {
     position: absolute;
     width: 40px;
     height: 40px;
-    background-image: url("img/bug.gif");
+    background-image: url("img/Bug.gif");
 
     /* Make sure the path is correct */
     background-size: cover;
