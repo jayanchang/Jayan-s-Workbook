@@ -284,6 +284,7 @@ h2 {
     width: 40px;
     height: 40px;
     background-image: url("img/bug.gif");
+
     /* Make sure the path is correct */
     background-size: cover;
     cursor: pointer;
