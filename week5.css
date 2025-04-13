@@ -1,0 +1,258 @@
+/* ========== Global Styles ========== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Permanent Marker', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+/* 🔁 Background Video Styling */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* ========== Header ========== */
+header {
+    background-color: #b8bafd;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-shadow: 2px 2px #fff;
+}
+
+header h1 a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+/* ========== Week Navigation Grid ========== */
+.doodle-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    background-color: #ff8453;
+    padding: 2vw;
+    border: 4px solid black;
+    border-radius: 2vw;
+    width: 90%;
+    max-width: 1200px;
+    margin: 1vw auto;
+    position: relative;
+    box-shadow: 3px 3px 0px black;
+}
+
+.doodle-grid a {
+    text-decoration: none;
+}
+
+.week {
+    max-width: 300px;
+    text-align: center;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.2s ease-out;
+}
+
+.minecraft-btn:hover {
+    background-color: #7bbf42; /* Slightly darker green */
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 #000;
+  }
+
+.week img {
+    width: 80%;
+    max-width: 120px;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.week img:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.week p {
+    font-size: 16px;
+    margin: 5px 0 0;
+    color: black;
+    text-shadow: 2px 2px #ff7043;
+}
+
+/* ========== Scrolling Banner ========== */
+.banner {
+    overflow: hidden;
+    background-color: #f9ffb7;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    margin: 2vw;
+}
+
+.banner-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 12s linear infinite;
+    padding: 10px;
+    font-size: 24px;
+    color: #d84315;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ========== Snapshot Feature ========== */
+.snapshot-container {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background: white;
+    border: 4px solid black;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 5px 5px 0 black;
+}
+
+/* Webcam and Frame */
+.snapshot-frame {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    margin: 1rem auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+}
+
+.snapshot-frame video,
+.snapshot-frame canvas,
+.snapshot-frame .frame-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.frame-overlay {
+    z-index: 3;
+}
+
+/* Snapshot Buttons */
+.snapshot-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+.minecraft-btn {
+    font-family: 'Monocraft', monospace;
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #92d050;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0 #000;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    display: inline-block;
+    width: auto;
+    align-self: flex-start; /* ✅ This prevents stretching in flex containers */
+  }
+  
+  
+
+.minecraft-btn:hover {
+    transform: scale(1.05);
+}
+
+.webcam-container {
+    width: 1200px;
+    max-width: 90vw;
+    margin: 3rem auto;
+    padding: 2rem;
+    border: 4px solid black;
+    background-color: #fff;
+    border-radius: 2vw;
+    font-family: 'Monocraft', monospace;
+    box-shadow: 3px 3px 0px black;
+  }
+  
+  .webcam-h3-heading {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  .webcam-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .webcam-content img {
+    max-width: 450px;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-top: 2vw;
+  }
+  
+  .webcam-description {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+  }
+  
+
+.webcam-description code {
+    font-family: Courier, monospace;
+    background: #eee;
+    padding: 0 4px;
+    border-radius: 4px;
+    margin-bottom: 10vw;
+}

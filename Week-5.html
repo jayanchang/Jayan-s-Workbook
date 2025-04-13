@@ -1,12 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 5</title>
+    <link rel="stylesheet" href="week5.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-    <a href="rage_sound/index.html" class="minecraft-button" target="_blank">▶ View P5.js Sketch</a>
+
+    <!-- 🟨 Top Header -->
+    <header>
+        <h1><a href="index.html" style="color: rgb(0, 0, 0); text-decoration: none;">JAYAN'S WORKBOOK</a></h1>
+    </header>
+
+    <!-- 🎥 Video Background (optional) -->
+    <video autoplay muted loop id="bg-video">
+        <source src="img/Background Video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Doodle Grid -->
+    <div class="doodle-grid">
+        <div class="week">
+            <a href="Week-1-2.html" class="week-link">
+                <img src="img/flying-rabbit.gif" alt="Week 1-3" class="static" data-hover="img/flying-rabbit.gif" />
+                <p>Week 1-2</p>
+            </a>
+        </div>
+
+        <div class="week">
+            <a href="Week-3.html" class="week-link">
+                <img src="img/square-hair-girl.gif" alt="Week 3" class="static" data-hover="img/square-hair-girl.gif" />
+                <p>Week 3</p>
+            </a>
+        </div>
+
+        <div class="week">
+            <a href="Week-4.html" class="week-link">
+                <img src="img/pink-bear.gif" alt="Week 7-9" class="static" data-hover="img/pink-bear.gif" />
+                <p>Week 4</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-5.html" class="week-link">
+                <img src="img/Bug.gif" alt="Week 7-9" class="static" data-hover="img/Bug.gif" />
+                <p>Week 5</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-6.html" class="week-link">
+                <img src="img/elf-guy.gif" alt="Week 7-9" class="static" data-hover="img/elf-guy.gif" />
+                <p>Week 6</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- 🎁 Moving Banner -->
+    <div class="banner">
+        <div class="banner-text">
+            👄 Welcome to Week 5 👄 Welcome to Week 5 👄 Welcome to Week 5 👄
+        </div>
+    </div>
+
+    <!-- 📸 Snapshot Section -->
+    <section class="snapshot-container">
+        <h2>📸 Take a Snapshot!</h2>
+        <div class="snapshot-frame">
+            <video id="webcam" autoplay muted playsinline></video>
+            <img src="img/webcame-frame.png" alt="frame" class="frame-overlay" />
+            <canvas id="snapshot"></canvas>
+        </div>
+
+
+        <div class="snapshot-buttons">
+            <button id="snapBtn" class="minecraft-btn">📷 Take Photo</button>
+            <button id="resetBtn" class="minecraft-btn" style="display: none;">🔁 Take Again</button>
+            <button id="downloadBtn" class="minecraft-btn" style="display: none;">💾 Download</button>
+        </div>
+    </section>
+
     
+    <!-- Webcam P5js Section -->
+    <section class="webcam-container">
+        <h2>📷 Webcam Practice</h2>
+
+        <div class="webcam-h3-heading">
+            <h3><u>Practice Work #1</u></h3>
+        </div>
+
+        <div class="webcam-content">
+            <img src="img/camera-practice.gif" alt="Camera Practice 1">
+
+            <div class="webcam-description">
+                <p>
+                    Using a webcam is probably my most favourite exercise! When I was developing this work, I thought
+                    about
+                    combining the knowledge from week 4… and that is mouse trace! I created this design where the
+                    captured
+                    image traces the mouse and is printed on the screen at the frame rate of 3. The image will then
+                    slowly
+                    fade away.
+                </p>
+                <a href="cam_practice/index.html" class="minecraft-btn" target="_blank">🎮 View Interactive Portrait</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 📜 Script -->
+    <script>
+        const canvas = document.getElementById("snapshot");
+        const video = document.getElementById("webcam");
+        const snapBtn = document.getElementById("snapBtn");
+        const resetBtn = document.getElementById("resetBtn");
+        const downloadBtn = document.getElementById("downloadBtn");
+
+        const frameImage = new Image();
+        frameImage.src = 'img/webcame-frame.png';
+
+        // ✅ Access the webcam
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;
+            });
+
+        snapBtn.addEventListener("click", () => {
+            const context = canvas.getContext("2d");
+
+            // Fix: Use the video element’s internal resolution
+            const w = video.videoWidth;
+            const h = video.videoHeight;
+
+            // Apply size to canvas for drawing
+            canvas.width = w;
+            canvas.height = h;
+
+            context.drawImage(video, 0, 0, w, h);
+
+            // If frame image is ready, draw it on top
+            if (frameImage.complete) {
+                context.drawImage(frameImage, 0, 0, w, h);
+            } else {
+                frameImage.onload = () => {
+                    context.drawImage(frameImage, 0, 0, w, h);
+                };
+            }
+
+            // Hide video, show canvas
+            canvas.style.display = "block";
+            video.style.display = "none";
+            snapBtn.style.display = "none";
+            resetBtn.style.display = "inline-block";
+            downloadBtn.style.display = "inline-block";
+        });
+
+        resetBtn.addEventListener("click", () => {
+            canvas.style.display = "none";
+            video.style.display = "block";
+            snapBtn.style.display = "inline-block";
+            resetBtn.style.display = "none";
+            downloadBtn.style.display = "none";
+        });
+
+        downloadBtn.addEventListener("click", () => {
+            const link = document.createElement("a");
+            link.download = "my_snapshot.png";
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+        });
+    </script>
+
 </body>
+
 </html>
