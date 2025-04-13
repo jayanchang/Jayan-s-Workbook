@@ -63,7 +63,6 @@ header h1 {
 
 /* Week Blocks (Adjustable Size) */
 .week {
-    flex: 1 1 250px;
     /* Adjusts width dynamically, min 250px */
     max-width: 300px;
     /* Prevents oversized blocks */
