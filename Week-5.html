@@ -65,22 +65,39 @@
         </div>
     </div>
 
-    <!-- 📸 Snapshot Section -->
-    <section class="snapshot-container">
-        <h2>📸 Take a Snapshot!</h2>
-        <div class="snapshot-frame">
-            <video id="webcam" autoplay muted playsinline></video>
-            <img src="img/webcame-frame.png" alt="frame" class="frame-overlay" />
-            <canvas id="snapshot"></canvas>
+    <!--P5JS + HTML-->
+    <section class="double-snapshot-wrapper">
+        <!-- Left: P5JS + HTML -->
+        <div class="html-p5-container">
+            <h2>💻 P5JS + HTML</h2>
+            <img src="img/troll-btns.png" alt="Canvas Preview" class="canvas-image" />
+
+            <div class="button-wrapper">
+                <a href="troll_btn/index.html" class="minecraft-btn">✨ View The Work</a>
+            </div>
+
+            <p>We learned how to edit HTML content on top of our p5.js sketches. I conducted a small experiment by
+                styling elements with HTML and creating buttons using p5.js. I came up with a playful design that trolls
+                users — clicking the "Delete" button actually spawns even more buttons instead.</p>
         </div>
 
-
-        <div class="snapshot-buttons">
-            <button id="snapBtn" class="minecraft-btn">📷 Take Photo</button>
-            <button id="resetBtn" class="minecraft-btn" style="display: none;">🔁 Take Again</button>
-            <button id="downloadBtn" class="minecraft-btn" style="display: none;">💾 Download</button>
-        </div>
+        <!-- Right: Snapshot -->
+        <section class="snapshot-container">
+            <h2>📸 Take a Snapshot!</h2>
+            <div class="snapshot-frame">
+                <video id="webcam" autoplay muted playsinline></video>
+                <img src="img/webcame-frame.png" alt="frame" class="frame-overlay" />
+                <canvas id="snapshot"></canvas>
+            </div>
+            <div class="snapshot-buttons">
+                <button id="snapBtn" class="minecraft-btn">📷 Take Photo</button>
+                <button id="resetBtn" class="minecraft-btn" style="display: none;">🔁 Take Again</button>
+                <button id="downloadBtn" class="minecraft-btn" style="display: none;">💾 Download</button>
+                <p>After taking a photo, you are able to download!</p>
+            </div>
+        </section>
     </section>
+
 
 
     <!-- Webcam P5js Section -->
@@ -97,7 +114,8 @@
                 <p>
                     Using a webcam is probably my most favourite exercise! When I was developing this work, I thought
                     about combining the knowledge from week 4… and that is mouse trace! I created this design where the
-                    captured image traces the mouse and is printed on the screen at the frame rate of 3. The image will then
+                    captured image traces the mouse and is printed on the screen at the frame rate of 3. The image will
+                    then
                     slowly fade away.
                 </p>
                 <a href="cam_practice/index.html" class="minecraft-btn" target="_blank">💮 View The Work </a>
@@ -123,12 +141,31 @@
                     p5.js.
                 </p>
                 <a href="cam_filter/index.html" class="minecraft-btn" target="_blank">📸 View The Work</a>
-                <a href="troll_btn/index.html" class="minecraft-btn" target="_blank">📸 View The Work</a>
-                
+
+
             </div>
         </div>
     </section>
 
+    <!-- ML5 Practice -->
+    <section class="ml5-container">
+        <h2>🧠 A Step Further: <code>ml5</code></h2>
+        <div class="ml5-content">
+          <img src="img/mouth-open.gif" alt="ML5 Demo" class="ml5-image" />
+      
+          <div class="ml5-description">
+            <h3><u>Frame Zoom In & Out</u></h3>
+            <p>
+              This section showcases my attempt to experiment with <code>ml5.js</code>. 
+              I explored how facial features can be detected using the webcam and how specific 
+              interactions such as mouth opening could be used to trigger zooming effects.
+            </p>
+            <a href="mouth_open/index.html" class="minecraft-btn" target="_blank">🧪 View My Work</a>
+          </div>
+        </div>
+      </section>
+      
+      
 
 
     <!-- 📜 Script -->
