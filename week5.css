@@ -92,8 +92,7 @@ header h1 a {
 }
 
 .minecraft-btn:hover {
-    background-color: #7bbf42;
-    /* Slightly darker green */
+    background-color: #7bbf42;/* Slightly darker green */
     transform: scale(1.05);
     box-shadow: 4px 4px 0 #000;
 }
@@ -184,6 +183,11 @@ header h1 a {
     margin: 1rem 0;
     display: block;
   }
+
+.canvas-image:hover {
+    transform: rotate(-1deg) scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
   
 
 .html-p5-container p {
@@ -304,7 +308,7 @@ header h1 a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
 
 }
 
@@ -410,6 +414,11 @@ header h1 a {
     box-shadow: 5px 5px 0 black;
     text-align: center;
   }
+
+  .ml5-container img:hover{
+    transform: rotate(-1deg) scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
   
   .ml5-container h2 {
     font-size: 2rem;
@@ -419,7 +428,7 @@ header h1 a {
   .ml5-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 4rem;
     justify-content: center;
     align-items: flex-start;
     text-align: left;
