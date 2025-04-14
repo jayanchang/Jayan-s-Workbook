@@ -1,0 +1,537 @@
+/* 🔁 Background Video Styling */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Push behind everything */
+    opacity: 0.3;
+    /* Optional: to make content readable */
+    pointer-events: none;
+    /* So user can click through video */
+}
+
+/* Font and Base Styles */
+body {
+    font-family: 'Permanent Marker', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+header {
+    background-color: #db00de;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-shadow: 2px 2px #fff;
+}
+
+.doodle-grid {
+    display: flex;
+    /* Keeps items in a row */
+    justify-content: center;
+    /* Centers items horizontally */
+    align-items: center;
+    /* Aligns items vertically */
+    flex-wrap: wrap;
+    /* Allows wrapping if the screen is too small */
+    gap: 2vw;
+    /* Adds spacing between items */
+    background-color: #fc7c7c;
+    padding: 2vw;
+    border: 4px solid black;
+    border-radius: 2vw;
+    width: 90%;
+    max-width: 1200px;
+    /* Ensures it doesn't get too wide on large screens */
+    margin: 1vw auto;
+    position: relative;
+    box-shadow: 3px 3px 0px black;
+}
+
+.doodle-grid a {
+    text-decoration: none;
+}
+
+
+/* Week Blocks (Adjustable Size) */
+.week {
+    /* Adjusts width dynamically, min 250px */
+    max-width: 300px;
+    /* Prevents oversized blocks */
+    text-align: center;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.2s ease-out;
+}
+
+.week:hover {
+    transform: rotate(-3deg) scale(1.05);
+}
+
+/* Hand-Drawn Image Icons (Responsive) */
+.week img {
+    width: 80%;
+    max-width: 120px;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.3s ease-in-out;
+    /* updated line */
+}
+
+.week img:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+
+/* Hand-Drawn Text */
+.week p {
+    font-size: 16px;
+    margin: 5px 0 0;
+    color: black;
+    text-shadow: 2px 2px #ff7043;
+}
+
+/* 🎁 Moving Banner */
+.banner {
+
+    overflow: hidden;
+    background-color: #ffc3ed;
+    border-top: 3px solid black;
+    margin: 2vw;
+    border-bottom: 3px solid black;
+}
+
+.banner-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 12s linear infinite;
+    padding: 10px;
+    font-size: 24px;
+    color: #d84315;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 🎵 Sound Intro Section */
+.sound-intro {
+    width: 1000px;
+    height: 100px;
+    margin: 3rem auto;
+    background-color: #ffe082;
+    border: 4px solid black;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 0 black;
+    text-align: center;
+}
+
+.sound-intro h2 {
+    font-size: 2rem;
+    margin: 0;
+    color: #222;
+    text-shadow: 1px 1px #fff;
+}
+
+
+/* 🎵 Sound Carousel Section */
+.sound-carousel-container {
+    width: 1200px;
+    max-width: 90vw;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: white;
+    border: 4px solid black;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 5px 5px 0 black;
+}
+
+.sound-carousel-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.carousel img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.arrow-btn {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: #ffd700;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    box-shadow: 3px 3px 0 #000;
+}
+
+.arrow-btn:hover {
+    transform: scale(1.1);
+}
+
+#play-sound-btn {
+    margin-top: 1.5rem;
+}
+
+.carousel-instruction {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 0.5rem;
+}
+
+
+.play-btn {
+    font-family: 'Monocraft', monospace;
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #ffadf4;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0 #000;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    display: inline-block;
+    width: auto;
+    align-self: flex-start;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.play-btn:hover {
+    background-color: #f774f5;
+    /* Slightly darker green */
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 #000;
+}
+
+/* 🧠 Week 6 Insights General Container */
+.week6-insights {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fffefc;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 3px 3px 0 black;
+}
+
+.week6-insights h2,
+.week6-insights h3 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.week6-insights p,
+.week6-insights li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.week6-insights ul {
+    list-style: square;
+    padding-left: 1.5rem;
+}
+
+.week6-img {
+    width: 100%;
+    max-width: 700px;
+    margin: 1.5rem auto;
+    display: block;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 #000;
+}
+
+/* 🔀 Insight Section Layout - Image Left, Text Right */
+/* 💡 Insight Section (Image Left, Text Right) */
+.insight-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    /* center vertically */
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 12px;
+    box-shadow: 2px 2px 0 black;
+
+}
+
+
+.insight-section img {
+    flex: 0 0 300px;
+    max-width: 400px;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 black;
+}
+
+.insight-text {
+    flex: 1;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.insight-text h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+
+/* 👩‍🎨 Artist Inspiration Cards Row */
+.influential-artists {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 2px 2px 0 black;
+    background-color: #fff;
+}
+
+.influential-artists h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Flex container for artist cards */
+.artist-inspiration-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Individual artist card */
+.artist-card {
+    flex: 1 1 500px;
+    max-width: 550px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 12px;
+    box-shadow: 2px 2px 0 black;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.artist-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.artist-card img {
+    width: 100%;
+    max-height: 294.5px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid black;
+    margin-bottom: 1rem;
+}
+
+.artist-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* Sound Practice Section */
+.sound-practice-section {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border: 4px solid black;
+    border-radius: 12px;
+    box-shadow: 5px 5px 0 black;
+    flex-wrap: wrap;
+}
+
+.sound-practice-main {
+    flex: 0 0 850px;
+}
+
+.sound-note {
+    flex: 0 0 250px;
+    border-left: 3px solid black;
+    padding-left: 1rem;
+    font-size: 0.95rem;
+}
+
+.sound-img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto 1rem auto;
+    /* centers image horizontally */
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 black;
+}
+
+
+.sound-practice-main ul li {
+    margin-bottom: 1rem;
+}
+
+.sound-practice-btn-wrapper {
+    text-align: center;
+    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sound-practice-btn {
+    font-family: 'Monocraft', monospace;
+    font-size: 1rem;
+    padding: 10px 24px;
+    background-color: #ffadf4;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0 #000;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    display: inline-block;
+    border-radius: 999px;
+    text-align: center;
+}
+
+.sound-practice-btn:hover {
+    background-color: #f774f5;
+    /* Slightly darker green */
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 #000;
+}
+
+.parrot-dancing img {
+    width: 100%;
+    max-width: 50px;
+    display: block;
+    margin: 0 auto 1rem auto;
+    /* centers image horizontally */
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+/* === 🎧 More Sound Practices Shared Styles === */
+.week6-insights {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fffefc;
+    border: 3px solid black;
+    border-radius: 12px;
+
+    box-shadow: 3px 3px 0 black;
+}
+
+.week6-insights h2 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+
+.insight-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.insight-section img {
+    width: 300px;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 black;
+}
+
+.insight-text {
+    flex: 1;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.insight-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+}
+
+.insight-text a.minecraft-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #92d050;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0 #000;
+    color: black;
+    font-family: 'Monocraft', monospace;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.insight-text a.minecraft-btn:hover {
+    transform: scale(1.05);
+}
