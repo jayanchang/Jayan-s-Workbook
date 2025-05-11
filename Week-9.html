@@ -1,0 +1,411 @@
+<!--I used AI such as Chatgpt to assist my coding: adjusting flexbox/container layout, debugging such as in Javascript, improve grammar of my writing-->
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="week9.css" />
+    <title>Week 9</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- 🟨 Top Header -->
+    <header>
+        <h1><a href="index.html" style="color: rgb(0, 0, 0); text-decoration: none;">JAYAN'S WORKBOOK</a></h1>
+    </header>
+
+    <!-- 🎥 Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="img/Background Video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- 📚 Doodle Grid -->
+    <div class="doodle-grid">
+        <div class="week">
+            <a href="Week-1-2.html" class="week-link">
+                <img src="img/flying-rabbit.gif" alt="Week 1-2" />
+                <p>Week 1-2</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-3.html" class="week-link">
+                <img src="img/square-hair-girl.gif" alt="Week 3" />
+                <p>Week 3</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-4.html" class="week-link">
+                <img src="img/pink-bear.gif" alt="Week 4" />
+                <p>Week 4</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-5.html" class="week-link">
+                <img src="img/Bug.gif" alt="Week 5" />
+                <p>Week 5</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-6.html" class="week-link">
+                <img src="img/elf-guy.gif" alt="Week 6" />
+                <p>Week 6</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-7.html" class="week-link">
+                <img src="img/octupus-guy.gif" alt="Week 7" />
+                <p>Week 7-8</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-9.html" class="week-link">
+                <img src="img/bee.gif" alt="Week 9" />
+                <p>Week 9</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- 🎁 Moving Banner -->
+    <div class="banner">
+        <div class="banner-text">
+            👀 Welcome to Week 9 👀 Welcome to Week 9 👀 Welcome to Week 9 👀
+        </div>
+    </div>
+
+    <!--Note-->
+    <div class="note">
+        <div class="note-text">
+            <p>For Week 7, 8, and 9, the design will be responsive</p>
+        </div>
+    </div>
+
+    <section class="carousel-wrapper">
+        <h2 class="section-heading">Chindogu's Sketches</h2>
+        <div class="carousel-inner">
+            <button class="carousel-btn" id="prevBtn">&#x276E;</button>
+            <div class="carousel-container" id="carouselContainer">
+                <div class="carousel-track" id="carouselTrack">
+                    <img src="img/social-distance.png" alt="Social Distance Sketch" />
+                    <img src="img/weather-display.png" alt="Weather Animation Sketch" />
+                    <img src="img/hand-firework.png" alt="ML5 Firework Sketch" />
+                    <img src="img/letter-web.jpg" alt="Letter Website Sketch" />
+                    <img src="img/happiness-machine.jpg" Happiness Machine Sketch" />
+                </div>
+            </div>
+            <button class="carousel-btn" id="nextBtn">&#x276F;</button>
+        </div>
+    </section>
+
+    <!-- Fullscreen Modal -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img class="modal-content" id="modalImage" />
+    </div>
+
+    <!-- 🎨 Physical Computing Art Examples Section -->
+    <section class="physical-computing-section">
+        <div class="physical-computing-card">
+            <h3>"Public Face" by Julius von Bismarck</h3>
+            <img src="img/public-face.jpg" alt="Public Face by Julius von Bismarck">
+            <p>a large, emotive smiley face installation that changes expression in real-time based on the mood of
+                social media posts from the surrounding city. Similar to my "Happiness Machine" sketch.
+            </p>
+            <a href="https://juliusvonbismarck.com/bank/index.php/projects/public-face-ii/" target="_blank">Visit Artist
+                Website</a>
+        </div>
+
+        <div class="physical-computing-card">
+            <h3>"Smoke Dress" – Anouk Wipprecht</h3>
+            <img src="img/smoke-dress.jpg" alt="Smoke Dress by Anouk Wipprecht">
+            <p>A dress that emits smoke when someone enters the wearer's personal space. Very similar to my "Jayan's
+                Social Distance Kits" of combining clothing with interactive arts.</p>
+            <a href="https://www.digiart21.org/art/smoke-dress" target="_blank">Visit Artist
+                Website</a>
+        </div>
+
+        <div class="physical-computing-card">
+            <h3>"The Treachery of Sanctuary" – Chris Milk</h3>
+            <img src="img/maxresdefault.jpg" alt="DNA Portraits by Heather Dewey-Hagborg">
+            <p>Users see their bodies transform into birds or dissolve into pixels across three panels. A good
+                inspiration for combining physical computing with p5js.</p>
+            <a href="http://milk.co/treachery" target="_blank">Visit Artist Website</a>
+        </div>
+    </section>
+
+    <!--Arduino with P5 -->
+    <section class="arduino-p5-section">
+        <h2>Arduino with P5JS!</h2>
+
+        <div class="arduino-overview">
+            <img src="img/arduino-p5.png" alt="Arduino and P5JS overview" />
+            <p>
+                Arduino and p5.js work together to create interactive design art by bridging the physical and digital
+                worlds. Arduino collects real-world data through sensors like light, motion, or touch, and sends that
+                information to p5.js via serial communication. In turn, p5.js, a JavaScript library for creative coding,
+                uses the incoming data to generate real-time visuals, animations, or sounds in the browser. This
+                interaction allows artists and designers to build immersive experiences where physical inputs directly
+                influence digital outputs, such as changing colors, triggering sounds, or animating shapes on screen.
+            </p>
+        </div>
+
+        <div class="idea-grid">
+            <div class="idea-box">
+                <h3>#1 Idea</h3>
+                <img src="img/cactus.gif" alt="Cactus system idea" />
+                <p>
+                    Use sensors such as light sensors with Arduino to explore the cactus's metabolic system. For
+                    example, during the day, when light intensity is high, photosynthesis occurs—this can be visualized
+                    in p5.js as a photosynthesizing cactus. In contrast, at night, when light intensity is low, the
+                    cactus engages in gas exchange.
+                </p>
+            </div>
+
+            <div class="idea-box">
+                <h3>#2 Idea</h3>
+                <img src="img/heartbeat.gif" alt="Heartbeats installation" />
+                <p>
+                    Measure participants’ heartbeats using an Arduino sensor and transform the data into sounds or
+                    animations, inspired by Rafael Lozano-Hemmer’s Pulse Room.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🧠 Arduino Explorations Section -->
+    <section class="arduino-explorations">
+        <h2>Arduino Explorations Related to My Sketches</h2>
+
+        <div class="exploration-box">
+            <img src="img/LCD.png" alt="LCD Display">
+            <div class="exploration-text">
+                <h3>Liquid-Crystal Display</h3>
+                <p>This design uses the LiquidCrystal library to control a 16×2 LCD screen connected to an Arduino. It
+                    displays the words "I AM" and "JAY-AN", then animates them by scrolling the text right and left in a
+                    loop. The effect creates a playful and dynamic interaction using only basic text and movement. The
+                    LCD will become an essential element for my builds, such as “Jay-An’s Social Distance Kits” or
+                    “Happiness Score Machines”, where numbers need to be displayed. <strong>Reference Creator:</strong>
+                    Sean Christian Lozana On Tinkercad.</p>
+            </div>
+        </div>
+
+        <div class="exploration-box">
+            <img src="img/pressure-sensor.gif" alt="Force Sensitive Resistor">
+            <div class="exploration-text">
+                <h3>Force Sensitive Resistor</h3>
+                <p>This Arduino design uses a force-sensitive resistor (FSR) to detect pressure and light up a series of
+                    six LEDs based on how much force is applied. As the analog reading from pin A0 increases (due to
+                    more pressure on the FSR), the LEDs connected to digital pins 2 through 7 light up in sequence,
+                    creating a visual intensity meter. The code reads the FSR input and compares the value against
+                    thresholds to control which LEDs turn on, simulating a pressure-based level indicator. Useful for my
+                    “Jay-An’s Social Distance Kits” where if someone touches my head, the light blinks to warn them.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-studies-section">
+        <h2>Arduino Designs Case Studies</h2>
+        <div class="case-studies-container">
+            <!-- First Case Study -->
+            <div class="case-study-box">
+                <h3>The Smart Planter with Feelings</h3>
+                <img src="img/lua-smart-planter.gif" alt="Smart Planter with Feelings">
+                <p>
+                    This vase is equipped with built-in sensors that measure factors such as light exposure and soil
+                    moisture, triggering one of 15 different emotional responses to communicate the plant's condition.
+                    It could serve as a strong inspiration for many of my designs. For instance, in a project like the
+                    “Happiness Score Machine,” I could incorporate an OLED screen to display simple animations or emojis
+                    that represent the user's mood. It also presents a compelling example of combining Arduino with
+                    p5.js—when the vase's sensors detect environmental changes, the visual representation of emotions
+                    updates accordingly. This demonstrates a cohesive integration of physical and digital art, aligning
+                    well with my concept of “Weather Sensing and p5.js Animation.”
+                </p>
+            </div>
+
+            <!-- Second Case Study -->
+            <div class="case-study-box">
+                <h3>Toilet Troll by Sung Fu (Scott)</h3>
+                <img src="img/toilet-troll.png" alt="Toilet Troll by Scott">
+                <p>
+                    This work, created by an alumni, really stood out to me—I love how he playfully "trolls" users. For
+                    example, when someone sits on the toilet, the machine brushes their leg as a warning, which I found
+                    both hilarious and creatively bold. It inspired me by showing that art doesn’t always need to carry
+                    deep meaning; it can also be personal, quirky, and weird in ways that make people laugh (it even
+                    reminded me of Sexed Robots by Paul Granjon). I see a reflection of my own personality in his work—I
+                    enjoy trolling people too, as seen in the landing page of my workbook. This inspired me to design
+                    “Jay-An’s Social Distance Kits”, a project that is intentionally funny and absurd!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open the Letter Section -->
+    <section class="letter-section">
+        <h2 class="letter-heading">Open the Letter</h2>
+        <img id="letterImage" src="img/letter-1.png" alt="Sealed Letter" class="letter-img" />
+
+        <!-- Modal -->
+        <div id="letterModal" class="letter-modal">
+            <span id="letterModalClose" class="letter-modal-close">×</span>
+            <img id="letterModalImage" class="letter-modal-img" alt="Open Letter" />
+        </div>
+    </section>
+
+
+    <!-- Modal for Letter Zoom -->
+    <div id="letterModal" class="modal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img class="modal-content" id="modalImage" />
+    </div>
+
+
+    <script>
+        // ─── Carousel Scroll ─────────────────────────────────────────────────────
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const container = document.getElementById('carouselContainer');
+
+        let scrollAmount = 0;
+
+        function getScrollPerClick() {
+            return container.clientWidth;
+        }
+
+        function updateCarouselPosition() {
+            track.style.transition = 'transform 0.4s ease';
+            track.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            scrollAmount = Math.max(scrollAmount - getScrollPerClick(), 0);
+            updateCarouselPosition();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const maxScroll = track.scrollWidth - container.clientWidth;
+            scrollAmount = Math.min(scrollAmount + getScrollPerClick(), maxScroll);
+            updateCarouselPosition();
+        });
+
+        // ─── Carousel Image Modal ────────────────────────────────────────────────
+        const imageModal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const imageModalClose = document.getElementById('modalClose');
+
+        document.querySelectorAll('.carousel-track img').forEach(img => {
+            img.addEventListener('click', () => {
+                imageModal.style.display = 'block';
+                modalImg.src = img.src;
+            });
+        });
+
+        imageModalClose.addEventListener('click', () => {
+            imageModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                imageModal.style.display = 'none';
+            }
+        });
+
+        // ─── Carousel Drag / Touch ───────────────────────────────────────────────
+        let isDragging = false;
+        let startX = 0;
+        let walk = 0;
+
+        track.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            startX = e.pageX;
+            track.style.cursor = 'grabbing';
+            track.style.transition = 'none';
+        });
+
+        track.addEventListener("mouseleave", () => {
+            if (isDragging) {
+                isDragging = false;
+                track.style.cursor = 'grab';
+                scrollAmount = Math.min(Math.max(scrollAmount - walk, 0), track.scrollWidth - container.clientWidth);
+                updateCarouselPosition();
+            }
+        });
+
+        track.addEventListener("mouseup", () => {
+            isDragging = false;
+            track.style.cursor = 'grab';
+            scrollAmount = Math.min(Math.max(scrollAmount - walk, 0), track.scrollWidth - container.clientWidth);
+            updateCarouselPosition();
+        });
+
+        track.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            walk = (e.pageX - startX);
+            track.style.transform = `translateX(-${scrollAmount - walk}px)`;
+        });
+
+        track.addEventListener("touchstart", (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            track.style.transition = 'none';
+        });
+
+        track.addEventListener("touchend", () => {
+            isDragging = false;
+            scrollAmount = Math.min(Math.max(scrollAmount - walk, 0), track.scrollWidth - container.clientWidth);
+            updateCarouselPosition();
+        });
+
+        track.addEventListener("touchmove", (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].clientX;
+            walk = x - startX;
+            track.style.transform = `translateX(-${scrollAmount - walk}px)`;
+        });
+
+        // ─── Letter Hover + Modal Zoom ───────────────────────────────────────────
+        const letterImg = document.getElementById("letterImage");
+        const letterModal = document.getElementById("letterModal");
+        const letterModalImage = document.getElementById("letterModalImage");
+        const letterModalClose = document.getElementById("letterModalClose");
+
+        const originalSrc = "img/letter-1.png";
+        const hoverSrc = "img/letter-2.png";
+
+        // Image hover swap
+        letterImg.addEventListener("mouseenter", () => {
+            letterImg.src = hoverSrc;
+        });
+
+        letterImg.addEventListener("mouseleave", () => {
+            letterImg.src = originalSrc;
+        });
+
+        // Open modal with zoomed letter
+        letterImg.addEventListener("click", () => {
+            letterModal.style.display = "block";
+            letterModalImage.src = "img/letter-open.png";
+        });
+
+        // Close modal on 'x' click
+        letterModalClose.addEventListener("click", () => {
+            letterModal.style.display = "none";
+        });
+
+        // Close modal when clicking outside the image
+        window.addEventListener("click", (e) => {
+            if (e.target === letterModal) {
+                letterModal.style.display = "none";
+            }
+        });
+
+    </script>
+
+
+</body>
+
+</html>

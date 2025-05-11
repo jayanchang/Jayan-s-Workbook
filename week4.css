@@ -64,38 +64,23 @@ h2 {
 /* 🔁 Navigation Grid */
 .doodle-grid {
     display: flex;
-    /* Keeps items in a row */
     justify-content: center;
-    /* Centers items horizontally */
     align-items: center;
-    /* Aligns items vertically */
     flex-wrap: wrap;
-    /* Allows wrapping if the screen is too small */
-    gap: 2vw;
-    /* Adds spacing between items */
-    background-color: #d36d00;
+    gap: 1vw;
+    background-color: #dfc8ff;
     padding: 2vw;
     border: 4px solid black;
     border-radius: 2vw;
     width: 90%;
     max-width: 1200px;
-    /* Ensures it doesn't get too wide on large screens */
     margin: 1vw auto;
     position: relative;
     box-shadow: 3px 3px 0px black;
-    text-decoration: none;
 }
 
-.doodle-grid a {
-    text-decoration: none;
-}
-
-/* Week Blocks (Adjustable Size) */
 .week {
-
-    /* Adjusts width dynamically, min 250px */
-    max-width: 300px;
-    /* Prevents oversized blocks */
+    max-width: 100px;
     text-align: center;
     border: 3px solid black;
     padding: 10px;
@@ -109,22 +94,22 @@ h2 {
     transform: rotate(-3deg) scale(1.05);
 }
 
-/* Hand-Drawn Image Icons (Responsive) */
 .week img {
     width: 80%;
-    /* Makes images responsive inside their containers */
     max-width: 120px;
-    /* Prevents them from getting too large */
     height: auto;
     object-fit: cover;
     border: 3px solid black;
     border-radius: 50%;
     background-color: white;
     box-shadow: 2px 2px 0px black;
-    transition: opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Hand-Drawn Text */
+.week img:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
 .week p {
     font-size: 16px;
     margin: 5px 0 0;
@@ -206,6 +191,11 @@ h2 {
     max-width: max-content;
 }
 
+.kusama-work img:hover{
+    transform: rotate(-1deg) scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
 .kusama-work p {
     font-size: 16px;
 }
@@ -257,6 +247,10 @@ h2 {
     object-fit: contain;
 }
 
+.p5-tips img:hover {
+    transform: rotate(-1deg) scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
 .p5-tips p {
     font-size: 14px;
     margin: 0;
@@ -301,6 +295,11 @@ h2 {
     font-family: 'Monocraft', monospace;
     border-radius: 2vw;
   }
+
+.self-portrait-section img:hover{
+    transform: rotate(-1deg) scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
   
   .self-portrait-section h2 {
     text-align: center;

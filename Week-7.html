@@ -1,0 +1,592 @@
+<!--I used AI such as Chatgpt to assist my coding: adjusting flexbox/container layout, debugging such as in Javascript, improve grammar of my writing-->
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 7 & 8</title>
+    <link rel="stylesheet" href="week7.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- 🟨 Top Header -->
+    <header>
+        <h1><a href="index.html" style="color: rgb(0, 0, 0); text-decoration: none;">JAYAN'S WORKBOOK</a></h1>
+    </header>
+
+    <!-- 🎥 Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="img/Background Video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- 📚 Doodle Grid -->
+    <div class="doodle-grid">
+        <div class="week">
+            <a href="Week-1-2.html" class="week-link">
+                <img src="img/flying-rabbit.gif" alt="Week 1-2" />
+                <p>Week 1-2</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-3.html" class="week-link">
+                <img src="img/square-hair-girl.gif" alt="Week 3" />
+                <p>Week 3</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-4.html" class="week-link">
+                <img src="img/pink-bear.gif" alt="Week 4" />
+                <p>Week 4</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-5.html" class="week-link">
+                <img src="img/Bug.gif" alt="Week 5" />
+                <p>Week 5</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-6.html" class="week-link">
+                <img src="img/elf-guy.gif" alt="Week 6" />
+                <p>Week 6</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-7.html" class="week-link">
+                <img src="img/octupus-guy.gif" alt="Week 7" />
+                <p>Week 7-8</p>
+            </a>
+        </div>
+        <div class="week">
+            <a href="Week-9.html" class="week-link">
+                <img src="img/bee.gif" alt="Week 0" />
+                <p>Week 9</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- 🎁 Moving Banner -->
+    <div class="banner">
+        <div class="banner-text">
+            🥳 Welcome to Week 7-8 🥳 Welcome to Week 7-8 🥳 Welcome to Week 7-8 🥳
+        </div>
+    </div>
+
+    <!--Note-->
+    <div class="note">
+        <div class="note-text">
+            <p>For Week 7, 8, and 9, the design will be responsive</p>
+        </div>
+    </div>
+
+    <!-- ⚡ Buzz Wire Game -->
+    <div class="buzz-game-container">
+        <h2 class="buzz-title">💣 Play wire loop game 💣</h2>
+        <canvas id="buzzCanvas" width="1200" height="400"></canvas>
+        <button id="startGame">Restart Game</button>
+    </div>
+
+    <div class="circuit-row">
+        <!-- Left Block -->
+        <div class="circuit-box">
+            <h2>Basic Circuit Practice</h2>
+            <img src="img/circuit-practice.png" alt="Basic Circuit" class="circuit-img" />
+            <p>
+                In class, we learned about basic breadboard circuit connections using an Elegoo microcontroller to power
+                two LEDs (one blue and one green). From this circuit, we also learned that:
+                <br><br>
+                • An LED must be connected with a current-limiting resistor to prevent it from burning out.<br>
+                • One leg of the resistor is connected to the positive rail, and the other is connected to the anode of
+                the LED.<br>
+                • When the button is pressed, the current flows through the circuit, allowing the LED to light up.
+            </p>
+        </div>
+
+        <!-- Right Block -->
+        <div class="circuit-box">
+            <h2>More Practice</h2>
+            <img src="img/wiring-component.png" alt="More Practice Circuit" class="circuit-img" />
+            <br>
+            Off the class, I did more practice on Tinkercad to gain a better understanding of circuit connection. This
+            circuit is powered by a 9V battery and uses a 555 timer IC to control a buzzer. Multiple
+            pushbuttons are connected in series with resistors, allowing manual input to the circuit. When a button
+            is pressed, it triggers the 555 timer, which then activates the buzzer for a set duration. The timing is
+            controlled by a capacitor and resistors connected to the timer. This setup demonstrates basic timing and
+            input control using a 555 timer on a breadboard.
+            <br><br>
+            <br><br>
+            <br><br>
+            </p>
+        </div>
+
+        <div class="arduino-section">
+            <h2 class="section-heading">Arduino + Circuits</h2>
+
+            <!-- Practice Work #1 -->
+            <div class="practice-block">
+                <h3><u>Practice Work #1</u></h3>
+                <div class="practice-row">
+                    <img src="img/button-light.gif" alt="Pushbutton LED Circuit" class="practice-image" />
+                    <p>
+                        This is my practice on Tinkercad with the use of an Arduino (as I was in the Tuesday class, did
+                        not get a chance to do much with Arduino) pushbutton + LED circuit with the
+                        code <code>INPUT_PULLUP</code>.
+                        I learned that the positive should connect to 5V and negative to GND for wiring. And by using
+                        <code>INPUT_PULLUP</code>,
+                        it simplifies wiring without a need for an external resistor.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Practice Work #2 -->
+            <div class="practice-block">
+                <h3><u>Practice Work #2</u></h3>
+                <div class="practice-row">
+                    <img src="img/Arduino-flash.gif" alt="PWM Flashing Light" class="practice-image" />
+                    <p>
+                        My practice with PWM. I used <code>randomSeed()</code> to randomize the brightness of the bulb
+                        by setting the value between 0 to 256.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Practice Work #3 -->
+            <div class="practice-block">
+                <h3><u>Practice Work #3</u></h3>
+                <div class="practice-row">
+                    <img src="img/ultrasonic-light.gif" alt="Ultrasonic Sensor Demo" class="practice-image" />
+
+                    <p>
+                        I pushed myself and practiced on the use of ultrasonic sensor. This circuit tests the distance
+                        of the object by changing the bulb to a specific colour.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--Arduino Examples Discovery-->
+        <div class="discovery-section">
+            <h2 class="section-heading">Discovery on Arduino Examples & Sketches</h2>
+
+            <div class="discovery-row">
+                <!-- Example 1 -->
+                <div class="discovery-box">
+                    <h3>Example 1</h3>
+                    <img src="img/ultrasonic-glasses.png" alt="Ultrasonic Glasses" class="discovery-img" />
+                    <p>
+                        As a UI/UX student learning about accessibility in design and services, this work really sparked
+                        my interest. I explored an Arduino sketch that powers ultrasonic glasses designed to detect
+                        obstacles and alert users through a buzzer or vibration. It demonstrates a real-world
+                        accessibility application using sensors and conditional logic.
+                    </p>
+                </div>
+
+                <!-- Example 2 -->
+                <div class="discovery-box">
+                    <h3>Example 2</h3>
+                    <img src="img/ball-balance.gif" alt="Ball Balance Project" class="discovery-img" />
+                    <p>
+                        This example involves balancing a ball using servo motors based on tilt sensor input. It
+                        introduced me to PID-like control principles, showcasing how Arduino handles real-time
+                        input/output in mechanical systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Note Taking Section-->
+        <div class="notes-carousel-section">
+            <div class="carousel-wrapper">
+                <h2 class="section-heading">My Arduino Notes</h2>
+
+                <div class="carousel-inner">
+                    <button class="carousel-btn" id="prevBtn">⟨</button>
+                    <div class="carousel-container" id="carouselContainer">
+                        <div class="carousel-track" id="carouselTrack">
+                            <img src="img/Arduino Notes-2.jpg" alt="Note 2" />
+                            <img src="img/Arduino Notes-3.jpg" alt="Note 3" />
+                            <img src="img/Arduino Notes-4.jpg" alt="Note 4" />
+                            <img src="img/Arduino Notes-5.jpg" alt="Note 5" />
+                            <img src="img/Arduino Notes-6.jpg" alt="Note 6" />
+                            <img src="img/Arduino Notes-7.jpg" alt="Note 7" />
+                        </div>
+                    </div>
+                    <button class="carousel-btn" id="nextBtn">⟩</button>
+                </div>
+            </div>
+
+            <!-- Modal for full image view -->
+            <div class="modal" id="imageModal">
+                <span class="modal-close" id="modalClose">×</span>
+                <img class="modal-content" id="modalImage" />
+            </div>
+        </div>
+
+        <!-- 🥔 Potato and Sound Section -->
+        <div class="potato-section">
+            <h3 class="potato-heading">🥔 Potato and Sound!</h3>
+            <div class="potato-content">
+                <img src="img/potato-sound.png" alt="Potato Touch Buzzer" class="potato-img">
+                <p class="potato-text">
+                    This workshop activity demonstrates a creative use of natural conductive materials.
+                    When you touch the potato, it triggers a response in the Arduino, causing a buzzer on the breadboard
+                    to sound.<br><br>
+                    One idea I had was to create a "talking fruit garden," where each fruit reacts when touched.
+                    For example, a fruit could say something like, "Hey! I’ll beat you up if you touch me again!"—adding
+                    humor and personality to the interaction.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- 🧠 Week 7 & 8 Arduino Flashcards -->
+        <div class="flashcard-section">
+            <h2 class="section-heading">Week 7 & 8 Arduino Keypoints Flashcards</h2>
+
+            <div class="flashcard-wrapper">
+                <div class="flashcard-controls">
+                    <button class="flashcard-btn" id="flashPrev">⟨</button>
+                </div>
+
+                <div class="flashcard-container" id="flashContainer">
+                    <div class="flashcard-track" id="flashTrack">
+                        <div class="flashcard">
+                            <h3><u>Analog Pins</u></h3>
+                            <p>A0–A5: Read input like voltage/resistance (on/off).</p>
+                        </div>
+                        <div class="flashcard">
+                            <h3><u>Digital Pins</u></h3>
+                            <p>0–13: Input/output. Some support PWM (~).</p>
+                        </div>
+                        <div class="flashcard">
+                            <h3><u>GND (Ground)</u></h3>
+                            <p>Neutralizes charge to complete circuits.</p>
+                        </div>
+                        <div class="flashcard">
+                            <h3><u>INPUTS</u></h3>
+                            <p>Sensors measure light, motion, etc.</p>
+                        </div>
+                        <div class="flashcard">
+                            <h3><u>PROCESSING</u></h3>
+                            <p>Arduino interprets the inputs.</p>
+                        </div>
+                        <div class="flashcard">
+                            <h3><u>OUTPUTS</u></h3>
+                            <p>Triggers light, sound, or movement.</p>
+                        </div>
+                        <div class="flashcard">
+                            <h3><u>setup()</u></h3>
+                            <p>Runs once for initialization like pinModes.</p>
+                        </div>
+                        <div class="flashcard">
+                            <h3><u>loop()</u></h3>
+                            <p>Repeats forever to check inputs + trigger outputs.</p>
+                        </div>
+                        <div class="flashcard">
+                            <h3><u>Electricity 101 (Ohm’s Law)</u></h3>
+                            <p>I = V/R, where Current (I) in Amps, Voltage (V) in Volts, Resistance (R) in Ohms</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flashcard-controls">
+                    <button class="flashcard-btn" id="flashNext">⟩</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 🎨 Physical Computing Art Examples Section (Week 7) -->
+        <section class="physical-computing-section">
+            <div class="physical-computing-card">
+                <h3>"Sound in Mind" by Yuri Suzuki</h3>
+                <img src="img/sound-in-mind.jpeg" alt="Sound in Mind by Yuri Suzuki">
+                <p>a retrospective exhibition at London's Design Museum, showcasing interactive
+                    installations that explore how we perceive and engage with sound in everyday life. Suitable for
+                    final
+                    project, using simple build ups to create strong interactive designs.
+                </p>
+                <a href="https://designmuseum.org/whats-on/sound-in-mind-yuri-suzuki" target="_blank">Visit Artist
+                    Website</a>
+            </div>
+
+            <div class="physical-computing-card">
+                <h3>"Kung Fu Motion Visualization" – Tobias Gremmler </h3>
+                <img src="img/kungfu.webp" alt="kung fu motion visualization">
+                <p>Digital art that transforms the movements of Kung Fu masters into mesmerizing abstract animations,
+                    capturing the fluid energy and philosophy of martial arts through computer-generated forms. It can
+                    consider using p5js and Arduino sensors to create reactive environments that respond to body
+                    movement</p>
+                <a href="https://www.thisiscolossal.com/2016/05/kung-fu-visualizations/" target="_blank">Visit Artist
+                    Website</a>
+            </div>
+
+            <div class="physical-computing-card">
+                <h3>"Pulse Room" – Rafael Lozano-Hemmer</h3>
+                <img src="img/pulse-room.jpg" alt="Pulse Room by Rafael Lozano-Hemmer">
+                <p>an installation where light bulbs flash in sync with participants’ heartbeats, visualizing collective
+                    human presence. I can create a work using Arduino sensors to sense heartbeats and display the data using p5js
+                </p>
+                <a href="https://www.lozano-hemmer.com/pulse_room.php
+                " target="_blank">Visit Artist Website</a>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const canvas = document.getElementById("buzzCanvas");
+        const ctx = canvas.getContext("2d");
+
+        const wire = [];
+        const wireThickness = 20;
+        let gameOver = false;
+        let win = false;
+
+        function generateWire() {
+            wire.length = 0;
+            const points = 20;
+            const stepX = canvas.width / (points - 1);
+            for (let i = 0; i < points; i++) {
+                const x = i * stepX;
+                const y = canvas.height / 2 + (Math.random() - 0.5) * 200;
+                wire.push({ x, y });
+            }
+        }
+
+        function drawWire() {
+            ctx.lineWidth = wireThickness;
+            ctx.strokeStyle = "#000";
+            ctx.shadowColor = "rgba(0, 0, 0, 0.4)";
+            ctx.shadowBlur = 4;
+
+            ctx.beginPath();
+            ctx.moveTo(wire[0].x, wire[0].y);
+
+            for (let i = 1; i < wire.length - 2; i++) {
+                const cx = (wire[i].x + wire[i + 1].x) / 2;
+                const cy = (wire[i].y + wire[i + 1].y) / 2;
+                ctx.quadraticCurveTo(wire[i].x, wire[i].y, cx, cy);
+            }
+
+            const last = wire[wire.length - 1];
+            ctx.lineTo(last.x, last.y);
+
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+        }
+
+        function drawGoal() {
+            const end = wire[wire.length - 1];
+            ctx.beginPath();
+            ctx.fillStyle = "#00c853"; // green goal
+            ctx.arc(end.x, end.y, wireThickness * 0.75, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawWire();
+            drawGoal();
+
+            if (gameOver) {
+                ctx.fillStyle = "rgba(255, 0, 0, 0.4)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "#fff";
+                ctx.font = "32px Monospace";
+                ctx.textAlign = "center";
+                ctx.fillText("💥 You touched the wire!", canvas.width / 2, canvas.height / 2);
+                return;
+            }
+
+            if (win) {
+                ctx.fillStyle = "rgba(0, 255, 0, 0.3)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "#000";
+                ctx.textAlign = "center";
+                ctx.font = "32px Monospace";
+                ctx.fillText("✅ You Win!", canvas.width / 2, canvas.height / 2 - 20);
+                ctx.font = "24px Monospace";
+                ctx.fillText("🎉 Congrats! You made it!", canvas.width / 2, canvas.height / 2 + 20);
+                return;
+            }
+
+            requestAnimationFrame(draw);
+        }
+
+        canvas.addEventListener("mousemove", (e) => {
+            if (gameOver || win) return;
+
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            // ✅ Check WIN first
+            const end = wire[wire.length - 1];
+            const endDist = Math.hypot(mouseX - end.x, mouseY - end.y);
+            if (endDist < wireThickness * 0.75) {
+                win = true;
+                return;
+            }
+
+            // ❌ Then check for loss (touching outside the wire)
+            const pixel = ctx.getImageData(mouseX, mouseY, 1, 1).data;
+            const isBlackStroke =
+                pixel[0] < 50 && pixel[1] < 50 && pixel[2] < 50 && pixel[3] > 0;
+
+            if (!isBlackStroke) {
+                gameOver = true;
+            }
+        });
+
+        document.getElementById("startGame").addEventListener("click", () => {
+            gameOver = false;
+            win = false;
+            generateWire();
+            draw();
+        });
+
+        generateWire();
+        draw();
+
+
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const container = document.getElementById('carouselContainer');
+
+        let scrollAmount = 0;
+        const scrollPerClick = 320;
+
+        prevBtn.addEventListener('click', () => {
+            scrollAmount = Math.max(scrollAmount - scrollPerClick, 0);
+            track.style.transform = `translateX(-${scrollAmount}px)`;
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const maxScroll = track.scrollWidth - container.clientWidth;
+            scrollAmount = Math.min(scrollAmount + scrollPerClick, maxScroll);
+            track.style.transform = `translateX(-${scrollAmount}px)`;
+        });
+
+        // Fullscreen modal logic
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalClose = document.getElementById('modalClose');
+
+        document.querySelectorAll('.carousel-track img').forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = 'block';
+                modalImg.src = img.src;
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+
+        const flashTrack = document.getElementById('flashTrack');
+        const flashPrev = document.getElementById('flashPrev');
+        const flashNext = document.getElementById('flashNext');
+        const flashContainer = document.getElementById('flashContainer');
+        let flashScroll = 0;
+
+        function getFlashScrollAmount() {
+            return flashContainer.clientWidth;
+        }
+
+        function updateFlashPosition() {
+            flashTrack.style.transform = `translateX(-${flashScroll}px)`;
+        }
+
+        flashPrev.addEventListener('click', () => {
+            flashScroll = Math.max(flashScroll - getFlashScrollAmount(), 0);
+            updateFlashPosition();
+        });
+
+        flashNext.addEventListener('click', () => {
+            const maxScroll = flashTrack.scrollWidth - flashContainer.clientWidth;
+            flashScroll = Math.min(flashScroll + getFlashScrollAmount(), maxScroll);
+            updateFlashPosition();
+        });
+
+        window.addEventListener('resize', () => {
+            // Reset position after resize to prevent alignment issues
+            flashScroll = 0;
+            updateFlashPosition();
+        });
+
+
+        // 🖱️ Drag + 🧭 Touch support
+        let isDragging = false;
+        let startX = 0;
+        let scrollLeft = 0;
+
+        flashTrack.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            flashTrack.classList.add('grabbing');
+            startX = e.pageX - flashTrack.offsetLeft;
+            scrollLeft = flashTrack.scrollLeft;
+        });
+
+        flashTrack.addEventListener("mouseleave", () => {
+            isDragging = false;
+            flashTrack.classList.remove('grabbing');
+        });
+
+        flashTrack.addEventListener("mouseup", () => {
+            isDragging = false;
+            flashTrack.classList.remove('grabbing');
+        });
+
+        flashTrack.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - flashTrack.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            flashTrack.scrollLeft = scrollLeft - walk;
+        });
+
+        // 📱 Touch support
+        flashTrack.addEventListener("touchstart", (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            scrollLeft = flashTrack.scrollLeft;
+        });
+
+        flashTrack.addEventListener("touchend", () => {
+            isDragging = false;
+        });
+
+        flashTrack.addEventListener("touchmove", (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].clientX;
+            const walk = (x - startX) * 1.5;
+            flashTrack.scrollLeft = scrollLeft - walk;
+            startX = x;
+        });
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,840 @@
+/* 🔁 Background Video Styling */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Font and Base Styles */
+body {
+    font-family: 'Permanent Marker', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+header {
+    background-color: #ffb753;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-shadow: 2px 2px #fff;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0;
+    color: #222;
+    text-shadow: 1px 1px #fff;
+}
+
+img {
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+    transform: rotate(-1.5deg) scale(1.01);
+}
+
+/* Doodle Grid */
+.doodle-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1vw;
+    background-color: #dfc8ff;
+    padding: 2vw;
+    border: 4px solid black;
+    border-radius: 2vw;
+    width: 90%;
+    max-width: 1200px;
+    margin: 1vw auto;
+    position: relative;
+    box-shadow: 3px 3px 0px black;
+}
+
+.week {
+    max-width: 100px;
+    text-align: center;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.2s ease-out;
+}
+
+.week:hover {
+    transform: rotate(-3deg) scale(1.05);
+}
+
+.week img {
+    width: 80%;
+    max-width: 120px;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 0px black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.week img:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.week p {
+    font-size: 16px;
+    margin: 5px 0 0;
+    color: black;
+    text-shadow: 2px 2px #ff7043;
+}
+
+/* 🎁 Moving Banner */
+.banner {
+    overflow: hidden;
+    background-color: #f7957f;
+    border-top: 3px solid black;
+    margin: 2vw;
+    border-bottom: 3px solid black;
+}
+
+.banner-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 12s linear infinite;
+    padding: 10px;
+    font-size: 24px;
+    color: #d84315;
+}
+
+.note {
+    margin: 0 auto;
+    /* Centers the box horizontally */
+    text-align: center;
+    gap: 1vw;
+    padding: 2vw;
+    border-radius: 2vw;
+    max-width: 1000px;
+    background-color: #ffb0b0;
+    border: 4px solid black;
+}
+
+
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3vw auto;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 4px solid black;
+    border-radius: 12px;
+    box-shadow: 5px 5px 0 black;
+    box-sizing: border-box;
+}
+
+.section-heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #222;
+    text-shadow: 1px 1px #fff;
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+    width: 300px;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 black;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Buttons */
+.carousel-btn {
+    font-size: 2rem;
+    background-color: #ffd700;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-family: 'Monocraft', monospace;
+    box-shadow: 3px 3px 0 black;
+}
+
+.carousel-btn:hover {
+    background-color: #ffc107;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+    border: 4px solid white;
+}
+
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.physical-computing-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3vw auto;
+    margin-top: 0rem;
+    padding: 2vw;
+    background: #fdffe2;
+    border: 4px solid black;
+    border-radius: 12px;
+    box-shadow: 5px 5px 0 black;
+    flex-wrap: wrap;
+}
+
+.physical-computing-card {
+    flex: 1 1 300px;
+    background: #fffefc;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 3px 3px 0 black;
+}
+
+.physical-computing-card img {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.physical-computing-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.arduino-p5-section {
+    max-width: 1200px;
+    margin: 5vw auto;
+    padding: 2vw;
+    background: #fffefc;
+    border: 4px solid black;
+    border-radius: 1vw;
+    box-shadow: 5px 5px 0 black;
+    box-sizing: border-box;
+}
+
+.arduino-p5-section h2 {
+    text-align: center;
+    font-size: 2.4vw;
+    margin-bottom: 2vw;
+    text-shadow: 1px 1px #fff;
+}
+
+.arduino-overview {
+    display: flex;
+    gap: 2vw;
+    border: 3px solid black;
+    padding: 2vw;
+    border-radius: 1vw;
+    margin-bottom: 3vw;
+    align-items: center;
+}
+
+.arduino-overview img {
+    width: 45%;
+    border: 3px solid black;
+    border-radius: 0.5vw;
+}
+
+.arduino-overview p {
+    flex: 1;
+    font-size: 1.1vw;
+    line-height: 1.6;
+    color: #333;
+}
+
+.idea-grid {
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.idea-box {
+    flex: 1 1 48%;
+    border: 3px solid black;
+    border-radius: 1vw;
+    padding: 2vw;
+    box-shadow: 3px 3px 0 black;
+    box-sizing: border-box;
+    background: #f9f9f9;
+}
+
+.idea-box h3 {
+    text-align: center;
+    font-size: 1.8vw;
+    margin-bottom: 1vw;
+    text-decoration: underline;
+}
+
+.idea-box img {
+    width: 100%;
+    max-height: 265px;
+    /* ⬅ Set a max height */
+    object-fit: cover;
+    /* ⬅ Ensure it maintains aspect ratio and crops neatly */
+    border: 2px solid black;
+    border-radius: 0.5vw;
+    margin-bottom: 1vw;
+}
+
+
+.idea-box p {
+    font-size: 1vw;
+    color: #333;
+    line-height: 1.5;
+}
+
+.arduino-explorations {
+    max-width: 1200px;
+    margin: 4vw auto;
+    padding: 2vw;
+    border: 4px solid black;
+    background-color: #fffde7;
+    border-radius: 1vw;
+    box-shadow: 4px 4px 0 black;
+}
+
+.arduino-explorations h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2vw;
+}
+
+.exploration-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 2vw;
+    border: 3px solid black;
+    border-radius: 0.7vw;
+    padding: 2vw;
+    background: white;
+    margin-bottom: 2vw;
+    box-shadow: 2px 2px 0 black;
+    flex-wrap: wrap;
+}
+
+.exploration-box img {
+    width: 350px;
+    max-width: 100%;
+    border: 2px solid black;
+    border-radius: 0.5vw;
+}
+
+.exploration-text {
+    flex: 1;
+}
+
+.exploration-text h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.exploration-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+.case-studies-section {
+    max-width: 1200px;
+    margin: 5vw auto;
+    padding: 2vw;
+    background-color: #fffdf9;
+    border: 4px solid black;
+    border-radius: 12px;
+    box-shadow: 5px 5px 0 black;
+    text-align: center;
+}
+
+.case-studies-section h2 {
+    font-size: 2.2vw;
+    margin-bottom: 2vw;
+    text-shadow: 1px 1px #fff;
+}
+
+.case-studies-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
+.case-study-box {
+    flex: 1 1 48%;
+    background: #ffffff;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 1.5vw;
+    box-shadow: 3px 3px 0 black;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.case-study-box h3 {
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+}
+
+.case-study-box img {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-bottom: 1vw;
+}
+
+.case-study-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding: 0 2vw;
+    text-align: center;
+}
+
+.open-letter-section {
+    text-align: center;
+    margin: 5vw 0;
+}
+
+.open-letter-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2vw;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.hover-letter {
+    max-width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hover-letter:hover {
+    transform: scale(1.05);
+}
+
+.letter-section {
+    text-align: center;
+    margin: 5vw auto;
+}
+
+.letter-heading {
+    font-size: 2rem;
+    margin-bottom: 2vw;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.letter-img {
+    width: 1000px;
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.letter-img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.letter-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+}
+
+.letter-modal-img {
+    margin-top: 5%;
+    max-width: 50%;
+    height: auto;
+    border: 4px solid white;
+    border-radius: 12px;
+    box-shadow: 5px 5px 0 black;
+}
+
+.letter-modal-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .banner-text {
+        font-size: 14px;
+    }
+
+    .doodle-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+        justify-items: center;
+        width: 95%;
+        margin: 1rem auto;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .week {
+        width: 70px;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .week img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .week p {
+        font-size: 0.75rem;
+    }
+
+    .note {
+        padding: 4vw 5vw;
+        gap: 2vw;
+        border-radius: 4vw;
+        max-width: 90%;
+        width: 90%;
+        font-size: 1rem;
+        margin: 1rem auto;
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .carousel-inner {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-container {
+        width: 100%;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .carousel-track {
+        flex-wrap: nowrap;
+        transform: translateX(0);
+        justify-content: flex-start;
+        cursor: grab;
+    }
+
+    .carousel-track img {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        cursor: grabbing;
+    }
+
+    .carousel-btn {
+        font-size: 1.5rem;
+        padding: 0.4rem 0.8rem;
+        margin: 0.5rem auto;
+    }
+
+    .carousel-wrapper {
+        width: 95%;
+        margin: 5vw auto;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .carousel-track img {
+        width: 90vw;
+        height: auto;
+        flex: 0 0 100%;
+    }
+
+    .carousel-inner {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .carousel-btn {
+        font-size: 1.5rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .physical-computing-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        margin: 4vw auto;
+        gap: 1.5rem;
+        width: 95%;
+        box-sizing: border-box;
+    }
+
+    .physical-computing-card {
+        width: 100%;
+        max-width: 90vw;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .physical-computing-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin: 1rem 0;
+    }
+
+    .physical-computing-card a {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+
+    .arduino-p5-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        margin: 4vw auto;
+        gap: 1.5rem;
+        width: 95%;
+        box-sizing: border-box;
+    }
+
+    .arduino-p5-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .arduino-overview {
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .arduino-overview img {
+        width: 100%;
+    }
+
+    .arduino-overview p {
+        font-size: 1rem;
+    }
+
+    .idea-grid {
+        flex-direction: column;
+    }
+
+    .idea-box {
+        flex: 1 1 100%;
+        margin-bottom: 2rem;
+    }
+
+    .idea-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .idea-box p {
+        font-size: 1rem;
+    }
+
+    .exploration-box {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        margin: 4vw auto;
+        gap: 1.5rem;
+        width: 95%;
+        box-sizing: border-box;
+    }
+
+    .exploration-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .exploration-text p {
+        font-size: 0.95rem;
+    }
+
+    .exploration-box img {
+        width: 90vw;
+        max-width: 100%;
+    }
+
+    .arduino-explorations {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        margin: 4vw auto;
+        gap: 1.5rem;
+        width: 95%;
+        box-sizing: border-box;
+    }
+
+    .case-studies-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        margin: 4vw auto;
+        gap: 1.5rem;
+        width: 95%;
+        box-sizing: border-box;
+    }
+
+    .case-studies-section h2 {
+        font-size: 5vw;
+    }
+
+    .case-studies-container {
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .case-study-box {
+        width: 100%;
+        padding: 4vw;
+    }
+
+    .case-study-box h3 {
+        font-size: 4.5vw;
+    }
+
+    .case-study-box p {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .case-study-box img {
+        height: auto;
+        max-height: none;
+    }
+
+    .letter-heading {
+        font-size: 1.4rem;
+    }
+
+    .letter-modal-img {
+        max-width: 95%;
+    }
+}

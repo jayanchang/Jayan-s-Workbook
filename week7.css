@@ -1,0 +1,849 @@
+/* 🔁 Background Video Styling */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Font and Base Styles */
+body {
+  font-family: 'Permanent Marker', cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+header {
+  background-color: #ffb753;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid black;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  text-shadow: 2px 2px #fff;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #222;
+  text-shadow: 1px 1px #fff;
+}
+
+img {
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+  transform: rotate(-1.5deg) scale(1.01);
+}
+
+/* Doodle Grid */
+.doodle-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1vw;
+  background-color: #dfc8ff;
+  padding: 2vw;
+  border: 4px solid black;
+  border-radius: 2vw;
+  width: 90%;
+  max-width: 1200px;
+  margin: 1vw auto;
+  position: relative;
+  box-shadow: 3px 3px 0px black;
+}
+
+.week {
+  max-width: 100px;
+  text-align: center;
+  border: 3px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 2px 2px 0px black;
+  transition: transform 0.2s ease-out;
+}
+
+.week:hover {
+  transform: rotate(-3deg) scale(1.05);
+}
+
+.week img {
+  width: 80%;
+  max-width: 120px;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid black;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 2px 2px 0px black;
+  transition: transform 0.3s ease-in-out;
+}
+
+.week img:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.week p {
+  font-size: 16px;
+  margin: 5px 0 0;
+  color: black;
+  text-shadow: 2px 2px #ff7043;
+}
+
+/* 🎁 Moving Banner */
+.banner {
+  overflow: hidden;
+  background-color: #f7957f;
+  border-top: 3px solid black;
+  margin: 2vw;
+  border-bottom: 3px solid black;
+}
+
+.banner-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 12s linear infinite;
+  padding: 10px;
+  font-size: 24px;
+  color: #d84315;
+}
+
+.note {
+  margin: 0 auto; /* Centers the box horizontally */
+  text-align: center;
+  gap: 1vw;
+  padding: 2vw;
+  border-radius: 2vw;
+  max-width: 1000px;
+  background-color: #ffb0b0;
+  border: 4px solid black;
+}
+
+
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ⚡ Buzz Wire Game Styling */
+.buzz-game-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff4fd;
+  border: 4px solid black;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 black;
+  text-align: center;
+}
+
+canvas {
+  border: 3px solid black;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 #000;
+  margin-bottom: 1rem;
+}
+
+#startGame {
+  font-family: 'Monocraft', monospace;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  border: 3px solid black;
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 black;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.buzz-title {
+  font-size: 2rem;
+  margin: 0;
+  color: #222;
+  text-shadow: 1px 1px #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.circuit-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+.circuit-box {
+  flex: 1 1 500px;
+  max-width: 580px;
+  background-color: #fffefc;
+  border: 4px solid black;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 black;
+  padding: 2rem;
+  text-align: left;
+}
+
+.circuit-box h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+  text-shadow: 1px 1px #fff;
+}
+
+.circuit-img {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid black;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 #000;
+  margin-bottom: 1.5rem;
+}
+
+.circuit-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+
+.arduino-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f9ecec;
+  border: 4px solid black;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 black;
+  box-sizing: border-box;
+}
+
+.section-heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+  text-shadow: 1px 1px #fff;
+}
+
+.practice-block {
+  margin-bottom: 3rem;
+}
+
+.practice-block h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+  text-shadow: 1px 1px #fff;
+  text-align: left;
+}
+
+.practice-row {
+  display: flex;
+  align-items: center;
+  /* ✅ Center vertically */
+  gap: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.practice-image {
+  width: 400px;
+  max-width: 100%;
+  border: 3px solid black;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.practice-row p {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+
+.physical-computing-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3vw auto;
+  margin-top: 0rem;
+  padding: 2vw;
+  background: #fdffe2;
+  border: 4px solid black;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 black;
+  flex-wrap: wrap;
+}
+
+.physical-computing-card {
+  flex: 1 1 300px;
+  background: #fffefc;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 3px 3px 0 black;
+}
+
+.physical-computing-card img {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.physical-computing-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.discovery-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border: 4px solid black;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 black;
+  box-sizing: border-box;
+}
+
+.discovery-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.discovery-box {
+  width: 48%;
+  min-width: 300px;
+  padding: 1.5rem;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 3px 3px 0 black;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.discovery-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  color: #222;
+  text-shadow: 1px 1px #fff;
+}
+
+.discovery-img {
+  width: 100%;
+  height: 300px;
+  /* ✅ fixed height */
+  object-fit: cover;
+  /* ✅ maintains visual balance, crops nicely */
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+
+.discovery-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* ✅ stack heading and carousel */
+  align-items: center;
+  background-color: #ffffff;
+  border: 4px solid black;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 5px 5px 0 black;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 1rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: #222;
+  text-shadow: 1px 1px #fff;
+  margin: 0;
+  padding-bottom: 0.5rem;
+
+}
+
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  width: 300px;
+  height: auto;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 black;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  font-size: 2rem;
+  background-color: #ffd700;
+  border: 3px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-family: 'Monocraft', monospace;
+  box-shadow: 3px 3px 0 black;
+}
+
+.carousel-btn:hover {
+  background-color: #ffc107;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  border: 4px solid white;
+}
+
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.potato-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  border: 4px solid black;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 black;
+  box-sizing: border-box;
+}
+
+.potato-heading {
+  font-size: 1.8rem;
+  color: #222;
+  text-shadow: 1px 1px #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.potato-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.potato-img {
+  width: 48%;
+  max-width: 500px;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 black;
+}
+
+.potato-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+
+
+.flashcard-section {
+  max-width: 1200px;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  border: 4px solid black;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 black;
+  box-sizing: border-box;
+}
+
+.flashcard-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.flashcard-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.flashcard-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.flashcard {
+  flex: 0 0 280px;
+  background-color: #fefefe;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 3px 3px 0 black;
+  text-align: center;
+}
+
+.flashcard h3 {
+  font-size: 1.25rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.flashcard p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.flashcard-btn {
+  font-size: 2rem;
+  background-color: #ffd000;
+  border: 3px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-family: 'Monocraft', monospace;
+  box-shadow: 3px 3px 0 black;
+}
+
+/* Add additional sections as needed using vw for spacing, padding, font sizes, etc. */
+
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .banner-text {
+    font-size: 14px;
+  }
+
+  h2,
+  .buzz-title,
+  .section-heading,
+  .circuit-box h2,
+  .potato-heading {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .doodle-grid,
+  .circuit-row,
+  .physical-computing-section,
+  .discovery-row,
+  .potato-content,
+  .practice-row,
+  .flashcard-wrapper,
+  .carousel-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .week {
+    max-width: 70px;
+  }
+
+  .note {
+    padding: 4vw 5vw;
+    gap: 2vw;
+    border-radius: 4vw;
+    max-width: 90%;
+    box-sizing: border-box;
+  }
+
+  .buzz-game-container,
+  .circuit-box,
+  .discovery-box,
+  .physical-computing-card,
+  .notes-carousel-section,
+  .flashcard-section,
+  .potato-section {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .practice-image,
+  .potato-img,
+  .discovery-img,
+  .carousel-track img {
+    width: 90vw;
+    max-width: 100%;
+    height: auto;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .carousel-container,
+  .flashcard-container {
+    width: 100%;
+    overflow: hidden;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .carousel-track,
+  .flashcard-track {
+    flex-wrap: nowrap;
+    transform: translateX(0);
+    justify-content: flex-start;
+    cursor: grab;
+  }
+
+  .carousel-track img,
+  .flashcard {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    cursor: grabbing;
+  }
+
+  .carousel-btn,
+  .flashcard-btn {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0.5rem auto;
+  }
+
+  .potato-text,
+  .practice-row p,
+  .discovery-box p,
+  .flashcard p {
+    text-align: center;
+  }
+
+  .carousel-inner {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .doodle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    justify-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .week {
+    width: 80px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: white;
+    box-shadow: 2px 2px 0px black;
+  }
+
+  .week img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .week p {
+    font-size: 0.75rem;
+  }
+
+  .flashcard-section {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .flashcard-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .flashcard-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flashcard-btn {
+    font-size: 1.6rem;
+    padding: 0.6rem 1.2rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #ffd700;
+    box-shadow: 2px 2px 0 black;
+    cursor: pointer;
+    height: fit-content;
+  }
+
+  .flashcard-container {
+    width: 100vw;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .flashcard-track {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+  
+  .flashcard {
+    flex: 0 0 100vw;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 3px 3px 0 black;
+    text-align: center;
+  }
+  
+  .flashcard h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+  }
+  
+  .flashcard p {
+    font-size: 1rem;
+    line-height: 1.6;
+    word-break: break-word;
+  }
+  
+}

@@ -1,8 +1,5 @@
 /* ========== Global Styles ========== */
-* {
-    box-sizing: border-box;
-    
-}
+
 
 h2 {
     font-size: 32px;
@@ -60,8 +57,8 @@ header h1 a {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2vw;
-    background-color: #ff8453;
+    gap: 1vw;
+    background-color: #dfc8ff;
     padding: 2vw;
     border: 4px solid black;
     border-radius: 2vw;
@@ -72,12 +69,8 @@ header h1 a {
     box-shadow: 3px 3px 0px black;
 }
 
-.doodle-grid a {
-    text-decoration: none;
-}
-
 .week {
-    max-width: 300px;
+    max-width: 100px;
     text-align: center;
     border: 3px solid black;
     padding: 10px;
@@ -89,12 +82,6 @@ header h1 a {
 
 .week:hover {
     transform: rotate(-3deg) scale(1.05);
-}
-
-.minecraft-btn:hover {
-    background-color: #7bbf42;/* Slightly darker green */
-    transform: scale(1.05);
-    box-shadow: 4px 4px 0 #000;
 }
 
 .week img {
